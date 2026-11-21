@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  /* === ADWALA LOGO-DRIVEN EDITORIAL LIGHT THEME === */
+  --bg-color: #faf9f6;
+  --assistant-color: #f3f0e6;
+  --theme-color: #d49600;
+  --theme-bright: #f5b800;
+  --theme-soft: #fdf6e2;
+  --theme-color-font: #111111;
+  --font-color: #5c5b57;
+  --heading-color: #111111;
+  --border-color: rgba(17, 17, 17, 0.09);
+  --reverse-color: #111111;
+  --body-font: "Poppins", sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--body-font);
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: var(--body-font);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    font-family: var(--body-font);
+  }
+}
+
+/* Signature warm editorial architectural grid background */
+.bg-editorial-grid {
+  background-color: #f8f6f0;
+  background-image:
+    linear-gradient(to right, rgba(17, 17, 17, 0.032) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.032) 1px, transparent 1px);
+  background-size: 110px 110px;
+}
+
+/* Subtle vertical architectural columns for About panel */
+.bg-editorial-lines {
+  background-color: #f3f0e6;
+  background-image: linear-gradient(
+    to right,
+    rgba(212, 150, 0, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 20% 100%;
+}
+
+/* Signature AdWala editorial underline CTA button */
+.editorial-link-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #111111;
+  padding-bottom: 7px;
+  transition: color 0.25s ease;
+}
+
+.editorial-link-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: rgba(17, 17, 17, 0.35);
+  transition: background-color 0.25s ease, transform 0.3s ease;
+}
+
+.editorial-link-btn:hover {
+  color: #c98c00;
+}
+
+.editorial-link-btn:hover::after {
+  background-color: #f5b800;
+  transform: scaleX(1.04);
+}
+
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Signature giant outlined editorial typography (matching Chitra letter-stroke) */
+.letter-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(17, 17, 17, 0.28);
+  transition: -webkit-text-stroke-color 0.3s ease;
+}
+
+.letter-stroke-gold {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(212, 150, 0, 0.65);
+}
+
